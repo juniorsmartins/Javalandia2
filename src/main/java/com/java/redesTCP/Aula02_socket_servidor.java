@@ -1,4 +1,4 @@
-package com.java.redes;
+package com.java.redesTCP;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

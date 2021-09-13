@@ -1,4 +1,4 @@
-package com.java.redes;
+package com.java.redesUDP;
 
 import java.io.BufferedReader;
 import java.io.IOException;
