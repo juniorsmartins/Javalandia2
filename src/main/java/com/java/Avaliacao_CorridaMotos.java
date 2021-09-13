@@ -1,6 +1,6 @@
-package com.utfpr;
+package com.java;
 
-import com.utfpr.Avaliacao_CorridaMotos.Corrida.Motociclista;
+import com.java.Avaliacao_CorridaMotos.Corrida.Motociclista;
 import java.util.ArrayList;
 import java.util.Collections;
 /**
