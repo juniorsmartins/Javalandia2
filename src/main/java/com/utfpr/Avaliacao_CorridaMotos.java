@@ -1,12 +1,12 @@
 package com.utfpr;
 
-import com.utfpr.Java2_B3E2.Corrida.Motociclista;
+import com.utfpr.Avaliacao_CorridaMotos.Corrida.Motociclista;
 import java.util.ArrayList;
 import java.util.Collections;
 /**
  * @author Junior Soares Martins
  */
-public class Java2_B3E2 
+public class Avaliacao_CorridaMotos 
 {   
     volatile static ArrayList<Motociclista> ordemChegada;
     volatile static ArrayList<Motociclista> ranking;
