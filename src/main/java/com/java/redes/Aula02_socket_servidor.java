@@ -1,6 +1,7 @@
 package com.java.redes;
 
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -22,19 +23,36 @@ public class Aula02_socket_servidor
         
         // Criar conexao
         Socket socket = null;
-        String mensa; int inteiro; float valor;
 
         // Tratar excecao
         try
         {
             socket = server.accept(); // Aguardar conexao - ouvir
-            DataInputStream dis = new DataInputStream(socket.getInputStream());
-            
-            
+            System.out.println("Servidor estabelece conexao com o cliente! Uso da porta " + socket.getPort());
+
+            // Define referencia de canal de entrada
+            DataInputStream dataIn = new DataInputStream(socket.getInputStream()); 
+            String mensagem = dataIn.readUTF(); // Recebe uma String
+
+            // Mostra a mensagem recebida
+            System.out.println("A mensagem recebida é: " + mensagem);
+            // Trata a mensagem recebida
+            String mensagemTratada = mensagem.toUpperCase(); 
+            // Mostra a mensagem tratada
+            System.out.println("A mensagem tratada é: " + mensagemTratada);
+
+            // Define referencia de canal de saida
+            DataOutputStream dataOut = new DataOutputStream(socket.getOutputStream());
+            // Reenviar a mensagem após tratamento
+            dataOut.writeUTF(mensagemTratada);
+
         }
         catch(IOException ioe)
         {System.err.println("\nExcecao!\n");}
         finally
-        {socket.close();}
+        {
+            socket.close();
+            server.close();
+        }
     }
 }
