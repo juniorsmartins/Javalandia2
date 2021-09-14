@@ -1,6 +1,6 @@
 package com.java.redesRMI;
 
-public class Aula01_cliente 
+public class Aula01_clienteDoSomador 
 {
     // Um stub representa o comportamento de um objeto remoto e oculta os detalhes de comunicac˜ao para simplificar o 
     // mecanismo de chamadas remotas. Assim, a comunicac˜ao do cliente com o objeto remoto é realizada através de uma 

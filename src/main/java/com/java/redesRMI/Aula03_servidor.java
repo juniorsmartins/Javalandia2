@@ -33,7 +33,7 @@ public class Aula03_servidor implements Aula03_validador
             // O método estático LocateRegistry.createRegistry contém argumentos e retorna um stub que implementa a interface 
             // remota java.rmi.registry.Registry e faz uma instância de um servidor de registros no servidor local, na porta 
             // TCP 1099 (padr˜ao). Em seguida, o método bind é invocado pelo stub registro para ligar o stub do objeto remoto 
-            // ao nome ”validador”no registro.
+            // ao nome ”validador” no registro.
             Registry registro = LocateRegistry.createRegistry(1099);
             registro.bind("validador", stub);
             
