@@ -1,6 +1,6 @@
-package com.utfpr.avaliacoes.java2_B3E2;
+package com.utfpr.avaliacoes.java2.B3E2;
 
-import com.utfpr.avaliacoes.java2_B3E2.Avaliacao_CorridaMotos.Corrida.Motociclista;
+import com.utfpr.avaliacoes.java2.B3E2.Avaliacao_CorridaMotos.Corrida.Motociclista;
 import java.util.ArrayList;
 import java.util.Collections;
 /**
