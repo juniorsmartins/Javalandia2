@@ -25,6 +25,7 @@ public class Aula01_CadastroImpl extends UnicastRemoteObject implements Aula01_I
         // Cadastra a informação da pessoa
         pessoa.setIdade(idade);
 
+        // Retorna a pessoa cadastrada
         return pessoa;
     }
 }
