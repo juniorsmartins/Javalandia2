@@ -1,8 +1,5 @@
 package com.java.interfaces;
 
-import com.java.interfaces.TesteControler_1;
-import com.javalandia2.treino.interfac.TesteInterface_1;
-
 public final class Teste_1 
 {
     private TesteInterface_1 testeInter;
