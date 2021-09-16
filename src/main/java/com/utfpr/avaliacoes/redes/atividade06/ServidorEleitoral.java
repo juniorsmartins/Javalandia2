@@ -1,4 +1,4 @@
-package com.utfpr.avaliacoes.redes_06;
+package com.utfpr.avaliacoes.redes.atividade06;
 
 import static java.lang.System.*;
 import java.rmi.Naming;
