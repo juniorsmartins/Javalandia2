@@ -63,7 +63,7 @@ public class Cliente
                     default:
                         break;
                 }
-            }while(loop == false);
+            }while(loop == true);
             
         }catch(NotBoundException | MalformedURLException | RemoteException re)
         {System.err.println("\nExcecao!");}
@@ -81,7 +81,7 @@ public class Cliente
                 System.out.println("Digite valor B: ");
                 long valorB = Long.parseLong(scan.nextLine());
                 
-                System.out.println("Resultado: " + objetoRemoto.add(valorB, valorB));
+                System.out.println("\nResultado da soma: " + objetoRemoto.add(valorA, valorB));
                 
                 resp = true;
             }catch(RemoteException | NumberFormatException nfe)
@@ -91,16 +91,61 @@ public class Cliente
     
     public void dividir(Scanner scan, ICalculadora objetoRemoto)
     {
-        System.out.println("\nDividir!");
+        boolean resp = false;
+        do
+        {
+            try
+            {
+                System.out.println("\nDigite valor A: ");
+                long valorA = Long.parseLong(scan.nextLine());
+                System.out.println("Digite valor B: ");
+                long valorB = Long.parseLong(scan.nextLine());
+                
+                System.out.println("\nResultado da divisao: " + objetoRemoto.div(valorA, valorB));
+                
+                resp = true;
+            }catch(ArithmeticException | RemoteException | NumberFormatException nfe)
+            {System.err.println("\nExcecao! Tente novamente.\n");}
+        }while(resp == false);
     }
     
     public void subtrair(Scanner scan, ICalculadora objetoRemoto)
     {
-        System.out.println("\nSubtrair!");
+        boolean resp = false;
+        do
+        {
+            try
+            {
+                System.out.println("\nDigite valor A: ");
+                long valorA = Long.parseLong(scan.nextLine());
+                System.out.println("Digite valor B: ");
+                long valorB = Long.parseLong(scan.nextLine());
+                
+                System.out.println("\nResultado da subtracao: " + objetoRemoto.sub(valorA, valorB));
+                
+                resp = true;
+            }catch(RemoteException | NumberFormatException nfe)
+            {System.err.println("\nExcecao! Tente novamente.\n");}
+        }while(resp == false);
     }
     
     public void multiplicar(Scanner scan, ICalculadora objetoRemoto)
     {
-        System.out.println("\nMultiplicar!");
+        boolean resp = false;
+        do
+        {
+            try
+            {
+                System.out.println("\nDigite valor A: ");
+                long valorA = Long.parseLong(scan.nextLine());
+                System.out.println("Digite valor B: ");
+                long valorB = Long.parseLong(scan.nextLine());
+                
+                System.out.println("\nResultado da multiplicacao: " + objetoRemoto.mul(valorA, valorB));
+                
+                resp = true;
+            }catch(RemoteException | NumberFormatException nfe)
+            {System.err.println("\nExcecao! Tente novamente.\n");}
+        }while(resp == false);
     }
 }
