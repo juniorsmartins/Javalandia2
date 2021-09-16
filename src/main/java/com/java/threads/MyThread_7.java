@@ -3,8 +3,6 @@
  */
 package com.java.threads;
 
-import com.javalandia2.aulas.threads.SumArray_7;
-
 public class MyThread_7 implements Runnable
 {
     Thread thrd; 
