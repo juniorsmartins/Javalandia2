@@ -1,7 +1,5 @@
 package com.java.redesRMI.ex03;
 
-import com.utfpr3.InterfaceObjeto;
-import com.utfpr3.Pessoa;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
