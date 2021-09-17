@@ -1,6 +1,5 @@
 package com.java.redesRMI.ex02;
 
-import com.utfpr2.Validadora;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
