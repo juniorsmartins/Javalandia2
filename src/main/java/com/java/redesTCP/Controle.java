@@ -1,7 +1,5 @@
 package com.java.redesTCP;
 
-import com.utfpr.ITelaControle;
-import com.utfpr.Pessoa;
 import java.io.IOException; 
 import java.io.ObjectInputStream; 
 import java.io.ObjectOutputStream; 
