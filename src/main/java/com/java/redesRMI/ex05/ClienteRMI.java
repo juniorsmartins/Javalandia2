@@ -1,8 +1,5 @@
 package com.java.redesRMI.ex05;
 
-import com.utfpr5.interfaces.iRandomico;
-import com.utfpr5.interfaces.iCalculadora;
-import com.utfpr5.interfaces.iCadastro;
 import java.rmi.Naming;
 
 public class ClienteRMI 

@@ -1,7 +1,5 @@
 package com.java.redesRMI.ex05;
 
-import com.utfpr5.interfaces.iCadastro;
-import com.utfpr5.interfaces.iOlaMundo;
 import java.io.Serializable;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
