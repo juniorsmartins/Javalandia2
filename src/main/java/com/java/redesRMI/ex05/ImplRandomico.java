@@ -1,6 +1,5 @@
 package com.java.redesRMI.ex05;
 
-import com.utfpr5.interfaces.iRandomico;
 import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;

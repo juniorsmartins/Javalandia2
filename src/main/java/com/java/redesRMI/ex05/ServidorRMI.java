@@ -1,8 +1,5 @@
 package com.java.redesRMI.ex05;
 
-import com.utfpr5.impl.ImplCalculadora;
-import com.utfpr5.impl.ImplCadastro;
-import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;

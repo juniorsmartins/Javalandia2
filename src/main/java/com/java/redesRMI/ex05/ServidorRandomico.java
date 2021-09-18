@@ -1,6 +1,5 @@
 package com.java.redesRMI.ex05;
 
-import com.utfpr5.impl.ImplRandomico;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
