@@ -1,6 +1,5 @@
 package com.java.redesRMI.ex04;
 
-import com.utfpr4.MetodosRemotos;
 import java.rmi.Naming;
 
 public class Cliente 
