@@ -1,6 +1,5 @@
 package com.java.redesRMI.ex05;
 
-import com.utfpr5.impl.ImplOlaMundo;
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
