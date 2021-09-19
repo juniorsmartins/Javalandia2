@@ -1,11 +1,17 @@
 package com.java.redesRMI;
 
+import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Scanner;
 
 public class Aula01_CadastroImpl extends UnicastRemoteObject implements Aula01_ICadastro
 {
-    @Override
+	private static final long serialVersionUID = 1L;
+
+	protected Aula01_CadastroImpl() throws RemoteException 
+	{super();}
+	
+	@Override
     public Aula01_Pessoa cadastrarPessoa(Aula01_Pessoa pessoa)
     {
         // Abre classe de acesso ao console

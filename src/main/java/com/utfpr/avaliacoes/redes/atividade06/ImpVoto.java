@@ -1,12 +1,18 @@
 package com.utfpr.avaliacoes.redes.atividade06;
 
+import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ImpVoto extends UnicastRemoteObject implements iVoto
 {
-    @Override
+    protected ImpVoto() throws RemoteException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
     public Voto criarVotos(String opcaoDeVoto, Voto voto) 
     {
         // Rotear para criar voto
