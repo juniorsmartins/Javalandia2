@@ -1,6 +1,7 @@
 package com.java.collection.listas;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Aula01_Main
@@ -40,8 +41,15 @@ public class Aula01_Main
 
         System.out.println("\n-----------------------\n");
 
-        Aula01_ComparatorAgencia compar = new Aula01_ComparatorAgencia();
+/*        Aula01_ComparatorAgencia compar = new Aula01_ComparatorAgencia();
         listaContas.sort(compar);
+ */
+        // Ou pode fazer assim
+//        listaContas.sort(new Aula01_ComparatorAgencia());
+
+        // Ou pode fazer ainda assim
+        Collections.sort(listaContas, new Aula01_ComparatorAgencia());
+
         listaContas.forEach(conta -> System.out.println(conta));
 
         System.out.println("\n-----------------------\n");
