@@ -4,9 +4,9 @@ public class Aula01_ContaPoupanca extends Aula01_Conta
 {
     private double rendaMensal;
 
-    public Aula01_ContaPoupanca(int agencia, int numero, double rendaMensal)
+    public Aula01_ContaPoupanca(int agencia, int numero, Aula01_Cliente cliente, double rendaMensal)
     {
-        super(agencia, numero);
+        super(agencia, numero, cliente);
         this.setRendaMensal(rendaMensal);
     }
 
@@ -20,6 +20,7 @@ public class Aula01_ContaPoupanca extends Aula01_Conta
     {
         return "\nConta Poupanca\nAgência: " + super.getAgencia()
                 + "\nNúmero: " + super.getNumero()
-                + "\nRenda Mensal: " + this.getRendaMensal();
+                + "\nRenda Mensal: " + this.getRendaMensal()
+                + "\nConta Cliente: " + super.getCliente().getNome();
     }
 }
