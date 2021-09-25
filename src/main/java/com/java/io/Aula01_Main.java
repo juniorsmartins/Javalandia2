@@ -9,11 +9,18 @@ public class Aula01_Main
 {
     public static void main(String[] args) throws IOException
     {
-        FileInputStream fis = new FileInputStream("lorem.txt");
-        InputStreamReader isr = new InputStreamReader(fis);
-        BufferedReader br = new BufferedReader(isr);
+        // Padrão Decorator br->isr->fis->lorem.txt
+        FileInputStream fis = new FileInputStream("lorem.txt"); // Faz a leitura dos bytes do arquivo
+        InputStreamReader isr = new InputStreamReader(fis); // Transforma os bytes em caracteres
+        BufferedReader br = new BufferedReader(isr); // Transforma os caracteres em linhas
+
+        System.out.print("\n");
         String linha = br.readLine();
-        System.out.println("\n" + linha);
+        while(linha != null)
+        {
+            System.out.println(linha);
+            linha = br.readLine();
+        };
 
         br.close();
     }
