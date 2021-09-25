@@ -1,4 +1,6 @@
 package com.java.serializable;
 
-public class Aula03_Main {
+public class Aula03_Main
+{
+
 }
