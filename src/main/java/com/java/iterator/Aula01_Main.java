@@ -1,7 +1,7 @@
-package com.java.lambda;
+package com.java.iterator;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 public class Aula01_Main
@@ -42,11 +42,10 @@ public class Aula01_Main
         // Lambda
         listaClientes.sort((Aula01_Cliente o1, Aula01_Cliente o2) -> o1.getNome().compareToIgnoreCase(o2.getNome()));
 
-        // Dá para referenciar o lambda numa variável e utilizar essa variável num sort
-/*      Comparator<Aula01_Cliente> compar = ((Aula01_Cliente o1, Aula01_Cliente o2) ->
-        {return o1.getNome().compareToIgnoreCase(o2.getNome());}); */
-
-        listaClientes.forEach(cliente -> System.out.println(cliente));
+        // Iterable
+        Iterator<Aula01_Cliente> iter = listaClientes.iterator();
+        while(iter.hasNext())
+        {System.out.println(iter.next());}
 
         System.out.println("\n-----------------------\n");
 
