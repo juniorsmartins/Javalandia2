@@ -1,4 +1,4 @@
-package com.java.classeanonima;
+package com.java.lambda;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -39,52 +39,23 @@ public class Aula01_Main
 
         System.out.println("\n-----------------------\n");
 
-        // Sorteio com classe anônima interna - essa classe define como será a comparação
-        listaClientes.sort
-        (
-            new Comparator<Aula01_Cliente>()
-            {
-                @Override
-                public int compare(Aula01_Cliente o1, Aula01_Cliente o2)
-                {
-                    String nomeO1 = o1.getNome();
-                    String nomeO2 = o2.getNome();
-                    return nomeO1.compareToIgnoreCase(nomeO2);
-                }
-            }
-        );
+        // Lambda
+        listaClientes.sort((Aula01_Cliente o1, Aula01_Cliente o2) ->
+                {return o1.getNome().compareToIgnoreCase(o2.getNome());});
+
+        // Dá para referenciar o lambda numa variável e utilizar essa variável num sort
+/*      Comparator<Aula01_Cliente> compar = ((Aula01_Cliente o1, Aula01_Cliente o2) ->
+        {return o1.getNome().compareToIgnoreCase(o2.getNome());}); */
 
         listaClientes.forEach(cliente -> System.out.println(cliente));
 
         System.out.println("\n-----------------------\n");
 
-        listaContas.sort
-        (
-                new Comparator<Aula01_Conta>()
-                {
-                    @Override
-                    public int compare(Aula01_Conta o1, Aula01_Conta o2)
-                    {
-                        return o1.getAgencia() - o2.getAgencia();
-                    }
-                }
-        );
+        // Lambda
+        listaContas.sort((Aula01_Conta o1, Aula01_Conta o2) ->
+                    {return o1.getAgencia() - o2.getAgencia();});
 
         listaContas.forEach(conta -> System.out.println(conta));
 
-/*
-    Dá para a Classe Anônima ser referenciada por uma variável e utilizada dessa forma. Daí usa a variável num sort.
-
-    Comparator<Aula01_Conta> comp = new Comparador<Aula01_Conta>()
-    {
-        @Override
-        public int compare(Aula01_Conta conta1, Aula01_Conta conta2)
-        {
-            String nomeC1 = conta1.getCliente().getNome();
-            String nomeC2 = conta2.getCliente().getNome();
-            return nomeC1.compareTo(nomeC2);
-        }
-    };
- */
     }
 }
