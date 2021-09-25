@@ -27,6 +27,7 @@ public class Aula10_MainMaisAtalho
 
         // ou pode ser assim
 
+
         // Fluxo de saída para arquivo.txt
         PrintWriter pw = new PrintWriter("lorem2.txt");
         pw.println("Brasil - Século XXI - O conto de Luladrão e os 400 ladrões");
