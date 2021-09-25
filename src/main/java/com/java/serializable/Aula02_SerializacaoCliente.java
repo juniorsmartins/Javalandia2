@@ -18,7 +18,7 @@ public class Aula02_SerializacaoCliente
 
         ObjectInputStream objEntrada = new ObjectInputStream(new FileInputStream("cliente.bin"));
         Aula02_Cliente cliente2 = (Aula02_Cliente) objEntrada.readObject();
-        System.out.println(cliente);
+        System.out.println("\n" + cliente);
         objEntrada.close();
 
     }

@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class Aula02_Cliente implements Serializable
 {
+    private static final long serialVersionUID = 1l;
+
     private String nome;
     private int idade;
     private double salario;
@@ -25,7 +27,7 @@ public class Aula02_Cliente implements Serializable
 
     @Override
     public String toString() {
-        return "Aula02_Cliente{" +
+        return "Cliente {" +
                 "nome='" + nome + '\'' +
                 ", idade=" + idade +
                 ", salario=" + salario +
