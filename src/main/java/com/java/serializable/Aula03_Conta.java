@@ -1,15 +1,20 @@
 package com.java.serializable;
 
+import java.io.Serializable;
+
 public abstract class Aula03_Conta
 {
+    private static final long serialVersionUID = 1L;
+
     private int agencia;
     private int numero;
     private Aula03_Cliente cliente;
 
-    public Aula03_Conta(int agencia, int numero)
+    public Aula03_Conta(int agencia, int numero, Aula03_Cliente cliente)
     {
         this.setAgencia(agencia);
         this.setNumero(numero);
+        this.setCliente(cliente);
     }
 
     public int getAgencia()

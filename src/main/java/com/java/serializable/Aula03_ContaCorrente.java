@@ -1,12 +1,14 @@
 package com.java.serializable;
 
-public class Aula03_ContaCorrente extends Aula03_Conta
+import java.io.Serializable;
+
+public class Aula03_ContaCorrente extends Aula03_Conta implements Serializable
 {
     private double taxaMensal;
 
-    public Aula03_ContaCorrente(int agencia, int numero, double taxaMensal)
+    public Aula03_ContaCorrente(int agencia, int numero, Aula03_Cliente cliente, double taxaMensal)
     {
-        super(agencia, numero);
+        super(agencia, numero, cliente);
         this.setTaxaMensal(taxaMensal);
     }
 

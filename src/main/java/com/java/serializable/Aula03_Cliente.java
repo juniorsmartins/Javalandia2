@@ -1,11 +1,16 @@
 package com.java.serializable;
 
-public class Aula03_Cliente
+import java.io.Serializable;
+
+public class Aula03_Cliente implements Serializable
 {
+    private static final long serialVersionUID = 1L;
+
     private String nome;
     private String cpf;
     private String profissao;
 
+    public Aula03_Cliente(){}
     public Aula03_Cliente(String nome, String cpf, String profissao)
     {
         this.setNome(nome);
