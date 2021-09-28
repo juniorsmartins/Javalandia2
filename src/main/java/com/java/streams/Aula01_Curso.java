@@ -1,4 +1,4 @@
-package com.java.stream;
+package com.java.streams;
 
 public class Aula01_Curso
 {
