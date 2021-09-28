@@ -22,6 +22,8 @@ public class Aula03_MainComparar
 
 //        Collections.sort(listaAulas, Comparator.comparing(Aula03_Aula::getTempo));
 //        listaAulas.sort((a1, a2) -> Integer.compare(a1.getTempo(), a2.getTempo()));
+//        listaAulas.sort(Comparator.comparing(s -> s.getTitulo().length()));
+//        listaAulas.sort(Comparator.comparing(String::length));
 //        listaAulas.sort(Comparator.comparing(Aula03_Aula::getTitulo));
 
         // ou fazer assim
