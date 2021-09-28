@@ -1,11 +1,11 @@
-package com.java.collection.listas;
+package com.java.stream;
 
-public class Aula04_Cursos
+public class Aula01_Curso
 {
     private String nome;
     private int numVagas;
 
-    public Aula04_Cursos(String nome, int numVagas)
+    public Aula01_Curso(String nome, int numVagas)
     {
         this.setNome(nome);
         this.setNumVagas(numVagas);
@@ -19,4 +19,10 @@ public class Aula04_Cursos
     {return numVagas;}
     public void setNumVagas(int numVagas)
     {this.numVagas = numVagas;}
+
+    @Override
+    public String toString() {
+        return "\nCurso\nNome: " + this.getNome()
+                + "\nNúmero de vagas: " + this.getNumVagas();
+    }
 }
