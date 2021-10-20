@@ -1,4 +1,4 @@
-package com.patterns.strategy.loja02.orcamento;
+package com.patterns.chainofresponsibility.loja02.orcamento;
 
 import java.math.BigDecimal;
 
