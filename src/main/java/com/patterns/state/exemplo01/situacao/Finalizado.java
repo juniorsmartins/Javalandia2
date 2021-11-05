@@ -1,4 +1,13 @@
 package com.patterns.state.exemplo01.situacao;
 
-public class Finalizado {
-}
+import com.patterns.state.exemplo01.SituacaoOrcamento;
+
+public class Finalizado extends SituacaoOrcamento
+{}
+
+
+
+
+
+
+
