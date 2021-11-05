@@ -1,7 +1,7 @@
-package com.patterns.chainofresponsibility.loja02;
+package com.patterns.chainofresponsibility.exemplo01;
 
-import com.patterns.chainofresponsibility.loja02.desconto.CalculadoraDeDescontos;
-import com.patterns.chainofresponsibility.loja02.orcamento.Orcamento;
+import com.patterns.chainofresponsibility.exemplo01.desconto.CalculadoraDeDescontos;
+import com.patterns.chainofresponsibility.exemplo01.orcamento.Orcamento;
 import java.math.BigDecimal;
 
 public class TesteDeDescontos

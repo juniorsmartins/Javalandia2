@@ -1,7 +1,7 @@
-package com.patterns.strategy.loja01;
+package com.patterns.strategy.exemplo01;
 
-import com.patterns.strategy.loja01.imposto.*;
-import com.patterns.strategy.loja01.orcamento.Orcamento;
+import com.patterns.strategy.exemplo01.imposto.*;
+import com.patterns.strategy.exemplo01.orcamento.Orcamento;
 import java.math.BigDecimal;
 
 public class TestesImpostos

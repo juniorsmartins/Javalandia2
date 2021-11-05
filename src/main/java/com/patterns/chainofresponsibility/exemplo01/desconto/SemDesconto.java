@@ -1,6 +1,6 @@
-package com.patterns.chainofresponsibility.loja02.desconto;
+package com.patterns.chainofresponsibility.exemplo01.desconto;
 
-import com.patterns.chainofresponsibility.loja02.orcamento.Orcamento;
+import com.patterns.chainofresponsibility.exemplo01.orcamento.Orcamento;
 
 import java.math.BigDecimal;
 
