@@ -1,6 +1,10 @@
 package com.patterns.observer.exemplo01;
 
+import com.patterns.observer.exemplo01.acoes.EnviarEmailPedido;
+import com.patterns.observer.exemplo01.acoes.SalvarPedidoBancoDados;
+
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class TestesPedidos
 {
@@ -11,7 +15,7 @@ public class TestesPedidos
         int quantidadeItens = 10;
 
         GeraPedido gerador = new GeraPedido(cliente, valorOrcamento, quantidadeItens);
-        GeraPedidoHandler handler = new GeraPedidoHandler(/*aqui passaria as dependências repository e etc*/);
+        GeraPedidoHandler handler = new GeraPedidoHandler(Arrays.asList(new SalvarPedidoBancoDados(), new EnviarEmailPedido()));
         handler.execute(gerador);
 
     }
