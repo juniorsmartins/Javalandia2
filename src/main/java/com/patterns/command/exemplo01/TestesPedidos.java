@@ -1,11 +1,19 @@
 package com.patterns.command.exemplo01;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 public class TestesPedidos
 {
     public static void main(String[] args)
     {
-        Orcamento orcamento = new Orcamento();
+        String cliente = "Marília de Souza";
+        BigDecimal valorOrcamento = new BigDecimal("600");
+        int quantidadeItens = 10;
 
+        GeraPedido gerador = new GeraPedido(cliente, valorOrcamento, quantidadeItens);
+        GeraPedidoHandler handler = new GeraPedidoHandler(/*aqui passaria as dependências repository e etc*/);
+        handler.execute(gerador);
 
     }
 }
