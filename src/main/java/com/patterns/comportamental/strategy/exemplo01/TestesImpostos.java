@@ -1,7 +1,6 @@
 package com.patterns.comportamental.strategy.exemplo01;
 
 import com.patterns.comportamental.strategy.exemplo01.imposto.*;
-import com.patterns.strategy.exemplo01.imposto.*;
 import com.patterns.comportamental.strategy.exemplo01.orcamento.Orcamento;
 import java.math.BigDecimal;
 
