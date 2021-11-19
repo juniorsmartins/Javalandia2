@@ -21,7 +21,7 @@ public abstract class Conteudo implements Serializable
         this.descricao = descricao;
     }
 
-    // -------------------- MÉTODOS COORDENADORES -------------------- //
+    // -------------------- MÉTODOS EXECUTORES -------------------- //
     public abstract double calcularXp();
 
     // -------------------- MÉTODOS DE ACESSO E MODIFICAÇÃO -------------------- //
