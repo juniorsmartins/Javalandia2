@@ -2,38 +2,27 @@ package com.desafios.bootcamp_spread;
 
 import java.io.Serializable;
 
-public final class Curso implements Serializable
+public final class Curso extends Conteudo implements Serializable
 {
     // -------------------- ATRIBUTOS DE CLASSE -------------------- //
     public static final long serialVersionUID = 1l;
 
     // -------------------- ATRIBUTOS DE INSTÂNCIA -------------------- //
-    private String titulo;
-    private String descricao;
     private int cargaHoraria;
 
     // -------------------- CONSTRUTORES -------------------- //
     public Curso(){}
     public Curso(String titulo, String descricao, int cargaHoraria)
     {
-        this.titulo = titulo;
-        this.descricao = descricao;
+        super(titulo, descricao);
         this.cargaHoraria = cargaHoraria;
     }
 
     // -------------------- MÉTODOS EXECUTORES -------------------- //
-    public void calcularXp()
-    {}
+    public double calcularXp()
+    {return Conteudo.XP_PADRAO * cargaHoraria;}
 
     // -------------------- MÉTODOS DE ACESSO E MODIFICAÇÃO -------------------- //
-    public String getTitulo()
-    {return titulo;}
-    public void setTitulo(String titulo)
-    {this.titulo = titulo;}
-    public String getDescricao()
-    {return descricao;}
-    public void setDescricao(String descricao)
-    {this.descricao = descricao;}
     public int getCargaHoraria()
     {return cargaHoraria;}
     public void setCargaHoraria(int cargaHoraria)
@@ -41,11 +30,10 @@ public final class Curso implements Serializable
 
     // -------------------- MÉTODOS SOBRESCRITOS -------------------- //
     @Override
-    public String toString() {
-        return "Curso { " + "\n" +
-                "Titulo = " + titulo + "\n" +
-                "Descricao = " + descricao + "\n" +
-                "Carga Horaria = " + cargaHoraria + " }";
+    public String toString()
+    {
+        return "Curso { Titulo = " + super.getTitulo() + " - Descricao = " + super.getDescricao() + " - " +
+                "Carga Horaria = " + cargaHoraria + " } \n";
     }
 
 
