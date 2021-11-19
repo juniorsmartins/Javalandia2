@@ -6,7 +6,7 @@ public abstract class Conteudo implements Serializable
 {
     // -------------------- ATRIBUTOS DE CLASSE -------------------- //
     public static final long serialVersionUID = 1l;
-    protected static final double XP_PADRAO = 10d;
+    protected static final double XP_PADRAO = 10D;
 
     // -------------------- ATRIBUTOS DE INSTÂNCIA -------------------- //
     private String titulo;

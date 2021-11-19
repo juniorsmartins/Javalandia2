@@ -3,6 +3,7 @@ package com.desafios.bootcamp_spread;
 import java.io.Serializable;
 import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 public final class Dev implements Serializable
@@ -20,13 +21,29 @@ public final class Dev implements Serializable
 
     // -------------------- MÉTODOS EXECUTORES -------------------- //
     public void inscreverBootcamp(Bootcamp bootcamp)
-    {}
+    {
+        conteudosInscritos.addAll(bootcamp.getConteudos());
+        bootcamp.getDevsInscritos().add(this);
+    }
 
     public void progredir()
-    {}
+    {
+        Optional<Conteudo> conteudo = conteudosInscritos.stream().findFirst();
+        if(conteudo.isPresent())
+        {
+            conteudosConcluidos.add(conteudo.get());
+            conteudosInscritos.remove(conteudo.get());
+        }
+        else
+        {System.err.println("Dev não matriculado!");}
+    }
 
-    public void calcularTotalXp()
-    {}
+    public double calcularTotalXp()
+    {
+        return conteudosInscritos.stream()
+                .mapToDouble(Conteudo::calcularXp)
+                .sum();
+    }
 
     // -------------------- MÉTODOS DE ACESSO E MODIFICAÇÃO -------------------- //
     public String getNome()

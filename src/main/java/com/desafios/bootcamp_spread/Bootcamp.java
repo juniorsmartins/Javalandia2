@@ -10,7 +10,7 @@ import java.util.Set;
 public final class Bootcamp implements Serializable
 {
     // -------------------- ATRIBUTOS DE CLASSE -------------------- //
-    public static final long serialVersionUID = 1l;
+    public static final long serialVersionUID = 1L;
 
     // -------------------- ATRIBUTOS DE INSTÂNCIA -------------------- //
     private String nome;
@@ -31,7 +31,7 @@ public final class Bootcamp implements Serializable
     public String getDescricao()
     {return descricao;}
     public void setDescricao(String descricao)
-    {this.descricao = descricao}
+    {this.descricao = descricao;}
     public LocalDate getDataInicial()
     {return dataInicial;}
     public void setDataInicial(LocalDate dataInicial)

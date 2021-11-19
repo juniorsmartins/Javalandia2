@@ -22,7 +22,7 @@ public final class Mentoria extends Conteudo implements Serializable
     // -------------------- MÉTODOS EXECUTORES -------------------- //
     @Override
     public final double calcularXp()
-    {return Conteudo.XP_PADRAO + 20d;}
+    {return Conteudo.XP_PADRAO + 30D;}
 
     // -------------------- MÉTODOS DE ACESSO E MODIFICAÇÃO -------------------- //
     public LocalDate getData()
