@@ -1,4 +1,4 @@
-package com.desafios.bootcamp_spread;
+package com.desafios.bootcamp_spread.d1;
 
 import java.io.Serializable;
 import java.time.LocalDate;
