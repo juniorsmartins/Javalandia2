@@ -2,14 +2,9 @@ package com.desafios.bootcamp_spread.d2;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.jar.Attributes;
-import java.util.stream.Collectors;
-import java.util.stream.DoubleStream;
-import java.util.stream.Stream;
 
 public class MainTemperatura
 {
@@ -78,11 +73,7 @@ public class MainTemperatura
                 .mapToDouble(BigDecimal::doubleValue)
                 .average().ifPresent(System.out::println);
 
-
-
     }
-
-
 }
 
 
