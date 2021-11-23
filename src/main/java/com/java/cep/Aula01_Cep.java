@@ -1,15 +1,14 @@
 package com.java.cep;
 
-import com.github.gilbertotorrezan.viacep.se.ViaCEPClient;
+/*import com.github.gilbertotorrezan.viacep.se.ViaCEPClient;
 import com.github.gilbertotorrezan.viacep.shared.ViaCEPEndereco;
-
-import java.io.IOException;
+import java.io.IOException;*/
 
 public class Aula01_Cep
 {
     public static void main(String[] args)
     {
-        ViaCEPClient cliente = new ViaCEPClient();
+/*        ViaCEPClient cliente = new ViaCEPClient();
         ViaCEPEndereco endereco = null;
         try
         {
@@ -19,7 +18,7 @@ public class Aula01_Cep
 
         System.out.println(endereco.getUf() + " - " + endereco.getLocalidade() +
                 " - " + endereco.getBairro() + " - " + endereco.getLogradouro() +
-                " - " + endereco.getComplemento() + " - " + endereco.getIbge());
+                " - " + endereco.getComplemento() + " - " + endereco.getIbge());*/
     }
 }
 
