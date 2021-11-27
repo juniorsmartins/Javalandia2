@@ -1,4 +1,4 @@
-package com.estruturadedados;
+package com.estruturadedados.pilha.aula01;
 
 public class Pilha
 {
@@ -35,7 +35,7 @@ public class Pilha
     public String toString()
     {
         String retorno = "-----------\n";
-        retorno += " Pilha \n";
+        retorno += "   Pilha \n";
         retorno += "-----------\n";
 
         No noAuxiliar = refNoEntradaPilha;
@@ -43,7 +43,7 @@ public class Pilha
         {
             if(noAuxiliar != null)
             {
-                retorno += "[No {Dado = " + noAuxiliar.getDado() + "}]";
+                retorno += "[No {Dado = " + noAuxiliar.getDado() + "}]\n";
                 noAuxiliar = noAuxiliar.getRefNo();
             }else
             {break;}

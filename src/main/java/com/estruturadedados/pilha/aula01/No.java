@@ -1,4 +1,4 @@
-package com.estruturadedados;
+package com.estruturadedados.pilha.aula01;
 
 public class No
 {
