@@ -8,8 +8,8 @@ public class MainFila
         Fila fila = new Fila();
         fila.enqueue("primeiro");
         fila.enqueue("segundo");
-        fila.enqueue("terceiro");
-        fila.enqueue("quarto");
+        fila.enqueue("3");
+        fila.enqueue("true");
         fila.enqueue("quinto");
 
         System.out.println("--------------");
