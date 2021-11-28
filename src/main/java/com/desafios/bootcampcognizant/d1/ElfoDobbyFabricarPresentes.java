@@ -1,4 +1,4 @@
-package com.desafios.bootcampcognizant;
+package com.desafios.bootcampcognizant.d1;
 
 import java.io.IOException;
 import java.util.Scanner;
