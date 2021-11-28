@@ -35,7 +35,17 @@ public class No<T>
     public String toString()
     {return "No {conteudo = " + conteudo + "}";}
 
-
+    public String toStringEncadeado()
+    {
+        String str = "No {conteudo = " + conteudo + "}";
+        if(proximoNo != null)
+        {
+            str += " -> " + proximoNo.toString();
+        }
+        else
+        {str += " -> null";}
+        return str;
+    }
 }
 
 
