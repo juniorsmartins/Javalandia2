@@ -13,7 +13,7 @@ public class ArvoreBinaria<T extends Comparable<T>>
         raiz = inserir(raiz, novoNo);
     }
 
-    public BinNo<T> inserir(BinNo<T> atual, BinNo<T> novoNo)
+    private BinNo<T> inserir(BinNo<T> atual, BinNo<T> novoNo)
     {
         if(atual == null)
         {return novoNo;}
@@ -24,8 +24,83 @@ public class ArvoreBinaria<T extends Comparable<T>>
         return atual;
     }
 
+    public void exibirInOrdem()
+    {
+        System.out.println("\nExibindo inOrdem");
+        exibirInOrdem(this.raiz);
+    }
+
+    private void exibirInOrdem(BinNo<T> atual)
+    {
+        if(atual != null)
+        {
+            exibirInOrdem(atual.getNoEsq());
+            System.out.println(atual.getConteudo() + ", ");
+            exibirInOrdem(atual.getNoDir());
+        }
+    }
+
+    public void exibirPosOrdem()
+    {
+        System.out.println("\nExibindo inOrdem");
+        exibirPosOrdem(this.raiz);
+    }
+
+    private void exibirPosOrdem(BinNo<T> atual)
+    {
+        if(atual != null)
+        {
+            exibirPosOrdem(atual.getNoEsq());
+            exibirPosOrdem(atual.getNoDir());
+            System.out.println(atual.getConteudo() + ", ");
+        }
+    }
+
+    public void exibirPreOrdem()
+    {
+        System.out.println("\nExibindo inOrdem");
+        exibirPreOrdem(this.raiz);
+    }
+
+    private void exibirPreOrdem(BinNo<T> atual)
+    {
+        if(atual != null)
+        {
+            System.out.println(atual.getConteudo() + ", ");
+            exibirPreOrdem(atual.getNoEsq());
+            exibirPreOrdem(atual.getNoDir());
+        }
+    }
+
+    public void remover(T conteudo)
+    {
+        try
+        {
+            BinNo<T> atual = this.raiz;
+            BinNo<T> pai = null;
+            BinNo<T> filho = null;
+            BinNo<T> temp = null;
+            while(atual != null && !atual.getConteudo().equals(conteudo))
+            {
+                pai = atual;
+                if(conteudo.compareTo(atual.getConteudo()) < 0)
+                {atual = atual.getNoEsq();}
+                else
+                {atual = atual.getNoEsq();}
+            }
+
+            if(atual == null)
+            {System.out.println("Conteúdo não encontrado.");}
+
+        }
+        catch (NullPointerException npe)
+        {System.err.println("Conteúdo não encontrado. Bloc catch" + npe.getMessage());}
+    }
 
 }
+
+
+
 
 
 
