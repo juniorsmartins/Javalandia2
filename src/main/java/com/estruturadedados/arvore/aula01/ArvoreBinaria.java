@@ -92,6 +92,65 @@ public class ArvoreBinaria<T extends Comparable<T>>
             if(atual == null)
             {System.out.println("Conteúdo não encontrado.");}
 
+            if(pai == null)
+            {
+                if(atual.getNoDir() == null)
+                {this.raiz = atual.getNoEsq();}
+                else if (atual.getNoEsq() == null)
+                {this.raiz = atual.getNoDir();}
+                else
+                {
+                    for(temp = atual, filho = atual.getNoEsq();
+                        filho.getNoDir() != null;
+                        temp = filho, filho = filho.getNoEsq())
+                    {
+                        if(filho != atual.getNoEsq())
+                        {
+                            temp.setNoDir(filho.getNoEsq());
+                            filho.setNoEsq(raiz.getNoEsq());
+                        }
+                    }
+                    filho.setNoDir(raiz.getNoDir());
+                    raiz = filho;
+                }
+            }
+            else if(atual.getNoDir() == null)
+            {
+                if(pai.getNoEsq() == atual)
+                {pai.setNoEsq(atual.getNoEsq());}
+                else
+                {pai.setNoDir(atual.getNoEsq());}
+            }
+            else if(atual.getNoEsq() == null)
+            {
+                if(pai.getNoEsq() == atual)
+                {pai.setNoEsq(atual.getNoDir());}
+                else
+                {pai.setNoDir(atual.getNoDir());}
+            }
+            else
+            {
+                for(
+                    temp = atual, filho = atual.getNoEsq();
+                    filho.getNoDir() != null;
+                    temp = filho, filho = filho.getNoDir()
+                )
+                {
+                    if(filho != atual.getNoEsq())
+                    {
+                        temp.setNoDir(filho.getNoEsq());
+                        filho.setNoEsq(atual.getNoEsq());
+                    }
+                    filho.setNoDir(atual.getNoDir());
+                    if(pai.getNoEsq() == atual)
+                    {pai.setNoEsq(filho);}
+                    else
+                    {pai.setNoDir(filho);}
+                }
+            }
+
+
+
         }
         catch (NullPointerException npe)
         {System.err.println("Conteúdo não encontrado. Bloc catch" + npe.getMessage());}
